@@ -1,10 +1,10 @@
 /**
  * api.js — Funciones centralizadas para llamar al backend FastAPI.
- * Configurado para conectarse al backend en producción alojado en Render.
+ * Configuración dinámica y unificada para entorno local y producción (Render).
  */
 
-// URL del backend en Render (reemplaza 'sistema-tramites-yau' si decides usar otro nombre en el Paso 3)
-const API_BASE = "https://sistema-tramites-yau.onrender.com/api";
+// Detecta automáticamente la URL del servidor actual en el que se abre la página
+const API_BASE = window.location.origin + "/api";
 
 /**
  * Realiza una petición HTTP genérica al backend.
