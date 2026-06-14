@@ -100,7 +100,8 @@ async function loginAdministrador(event) {
   }
 
   try {
-    const response = await fetch("http://localhost:8000/api/auth/login-admin", {
+    // CORRECCIÓN: Ahora usa API_BASE que se adapta automáticamente a Local o Render
+    const response = await fetch(API_BASE + "/auth/login-admin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })
